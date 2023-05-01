@@ -1,13 +1,12 @@
 package com.it_academy.test;
 
 import com.it_academy.onliner.framework.DriverManager;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterSuite;
 
 
 public class BaseTest {
-
-    @BeforeClass
-    public void init() {
-        DriverManager.initDriver();
+    @AfterSuite
+    public void closeBrowser() {
+        DriverManager.closeBrowser();
     }
 }

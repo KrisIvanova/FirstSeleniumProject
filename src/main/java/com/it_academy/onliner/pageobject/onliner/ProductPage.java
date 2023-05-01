@@ -1,35 +1,29 @@
 package com.it_academy.onliner.pageobject.onliner;
 
-import com.codeborne.selenide.ElementsCollection;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
-import static com.codeborne.selenide.Selenide.$$x;
+import java.util.Map;
 
 public class ProductPage extends BasePage {
 
-    private final ElementsCollection schemaProductDescriptionCollection =
-            $$x("//div[@class='schema-product']");
+    private static final String SCHEMA_PRODUCT_DESCRIPTION_XPATH_PATTERN =
+            "//div[@class='schema-product']";
 
-    private final ElementsCollection productTitleCollection =
-            $$x("//span[contains(@data-bind, 'product.full_name')]");
+    private static final String PRODUCT_TITLE_XPATH_PATTERN =
+            "//span[contains(@data-bind, 'product.full_name')]";
 
-    private final ElementsCollection productDescriptionCollection =
-            $$x("//span[contains(@data-bind, 'description')]");
+    private static final String PRODUCT_DESCRIPTION_XPATH_PATTERN =
+            "//span[contains(@data-bind, 'description')]";
 
-    private final ElementsCollection titlesSchemaFilter =
-            $$x("//div[contains(@class, 'label')]");
 
-    public List<Integer> getCatalogCategoriesProductFullDescriptionElements() {
-        List<Integer> sizesElements = new ArrayList<>();
-        sizesElements.add(schemaProductDescriptionCollection.size());
-        sizesElements.add(productTitleCollection.size());
-        sizesElements.add(productDescriptionCollection.size());
-        return sizesElements;
-    }
-
-    public List<String> getCatalogSchemaFilterElements() {
-        return titlesSchemaFilter.texts();
+    public Map<By, List<WebElement>> getListOfCatalogCategoryProductFullDescriptionElements() {
+        Map<By, List<WebElement>> titleCollection = new HashMap<>();
+        titleCollection.put(By.xpath(SCHEMA_PRODUCT_DESCRIPTION_XPATH_PATTERN), find(By.xpath(SCHEMA_PRODUCT_DESCRIPTION_XPATH_PATTERN)));
+        titleCollection.put(By.xpath(PRODUCT_TITLE_XPATH_PATTERN), find(By.xpath(PRODUCT_TITLE_XPATH_PATTERN)));
+        titleCollection.put(By.xpath(PRODUCT_DESCRIPTION_XPATH_PATTERN), find(By.xpath(PRODUCT_DESCRIPTION_XPATH_PATTERN)));
+        return titleCollection;
     }
 }

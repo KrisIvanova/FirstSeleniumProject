@@ -1,48 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-01T16:23:51 MSK" name="Surefire suite" finished-at="2023-05-01T16:25:11 MSK" duration-ms="79412">
+  <suite started-at="2023-04-17T21:04:48 MSK" name="Surefire suite" finished-at="2023-04-17T21:05:20 MSK" duration-ms="31999">
     <groups>
     </groups>
-    <test started-at="2023-05-01T16:23:51 MSK" name="Surefire test" finished-at="2023-05-01T16:25:11 MSK" duration-ms="79412">
+    <test started-at="2023-04-17T21:04:48 MSK" name="Surefire test" finished-at="2023-04-17T21:05:20 MSK" duration-ms="31999">
       <class name="com.it_academy.test.onliner.ProductPagesTest">
-        <test-method is-config="true" signature="init()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@6293abcc]" started-at="2023-05-01T16:23:51 MSK" name="init" finished-at="2023-05-01T16:23:57 MSK" duration-ms="5189" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method is-config="true" signature="navigationToHomePage()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@6293abcc]" started-at="2023-05-01T16:23:57 MSK" name="navigationToHomePage" finished-at="2023-05-01T16:24:02 MSK" duration-ms="5137" status="PASS">
+        <test-method is-config="true" signature="navigationToHomePage()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@3f3c7bdb]" started-at="2023-04-17T21:04:48 MSK" name="navigationToHomePage" finished-at="2023-04-17T21:04:57 MSK" duration-ms="8509" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigationToHomePage -->
-        <test-method signature="testIsElementsDescriptionPresentUnderEachElementsTitle()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@6293abcc]" started-at="2023-05-01T16:24:02 MSK" name="testIsElementsDescriptionPresentUnderEachElementsTitle" finished-at="2023-05-01T16:24:18 MSK" duration-ms="16163" status="PASS">
+        <test-method signature="testSetGouLocation()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@3f3c7bdb]" started-at="2023-04-17T21:04:57 MSK" name="testSetGouLocation" finished-at="2023-04-17T21:05:20 MSK" duration-ms="23431" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testIsElementsDescriptionPresentUnderEachElementsTitle -->
-        <test-method signature="testIsElementsPresentInAccessoriesSection()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@6293abcc]" started-at="2023-05-01T16:24:18 MSK" name="testIsElementsPresentInAccessoriesSection" finished-at="2023-05-01T16:24:23 MSK" duration-ms="5035" status="PASS">
+        </test-method> <!-- testSetGouLocation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@3f3c7bdb]" started-at="2023-04-17T21:05:20 MSK" name="closeBrowser" finished-at="2023-04-17T21:05:21 MSK" duration-ms="325" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testIsElementsPresentInAccessoriesSection -->
-        <test-method signature="testIsFullDescriptionOfEachProductExists()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@6293abcc]" started-at="2023-05-01T16:24:23 MSK" name="testIsFullDescriptionOfEachProductExists" finished-at="2023-05-01T16:24:45 MSK" duration-ms="22360" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testIsFullDescriptionOfEachProductExists -->
-        <test-method signature="testIsSchemaFilterExist()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@6293abcc]" started-at="2023-05-01T16:24:45 MSK" name="testIsSchemaFilterExist" finished-at="2023-05-01T16:24:57 MSK" duration-ms="11388" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testIsSchemaFilterExist -->
-        <test-method signature="testIsSectionsTitlesExists()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@6293abcc]" started-at="2023-05-01T16:24:57 MSK" name="testIsSectionsTitlesExists" finished-at="2023-05-01T16:25:01 MSK" duration-ms="4293" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testIsSectionsTitlesExists -->
-        <test-method signature="testIsTitlesOfFooterExist()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@6293abcc]" started-at="2023-05-01T16:25:01 MSK" name="testIsTitlesOfFooterExist" finished-at="2023-05-01T16:25:02 MSK" duration-ms="691" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testIsTitlesOfFooterExist -->
-        <test-method signature="testIsVerticalListOfSpecifiedSectionsExists()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@6293abcc]" started-at="2023-05-01T16:25:02 MSK" name="testIsVerticalListOfSpecifiedSectionsExists" finished-at="2023-05-01T16:25:11 MSK" duration-ms="9020" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testIsVerticalListOfSpecifiedSectionsExists -->
+        </test-method> <!-- closeBrowser -->
       </class> <!-- com.it_academy.test.onliner.ProductPagesTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->

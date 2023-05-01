@@ -6,8 +6,8 @@ public enum Driver {
     CHROME("chrome", new ChromeDriverCreator()),
     EDGE("edge", new EdgeDriverCreator());
 
-    private final String driverType;
-    private final WebDriverCreator webDriverCreator;
+    private String driverType;
+    private WebDriverCreator webDriverCreator;
 
     Driver(String driverType, WebDriverCreator webDriverCreator) {
         this.driverType = driverType;
@@ -26,7 +26,6 @@ public enum Driver {
         return Arrays.stream(Driver.values())
                 .filter(driver -> driver.getDriverType().equals(driverType))
                 .findAny()
-                .orElseThrow(() -> new IllegalArgumentException("Driver type'" + driverType +
-                        "' is not specified in Driver enum"));
+                .orElseThrow(() -> new IllegalArgumentException("Driver type'" + driverType + "' is not specified in Driver enum"));
     }
 }

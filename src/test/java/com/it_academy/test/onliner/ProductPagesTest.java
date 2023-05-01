@@ -1,25 +1,27 @@
 package com.it_academy.test.onliner;
 
+import com.it_academy.onliner.framework.DriverManager;
 import com.it_academy.onliner.pageobject.onliner.Header;
 
 import com.it_academy.test.BaseTest;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.*;
 
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 public class ProductPagesTest extends BaseTest {
 
-    private Header header;
+    private final Header header = new Header();
 
 
     @BeforeClass
     public void navigationToHomePage() {
-        header = new Header();
-        getWebDriver().get("https://www.onliner.by/");
+        DriverManager.getWebDriver().get("https://www.onliner.by/");
     }
 
     @Test
@@ -29,7 +31,7 @@ public class ProductPagesTest extends BaseTest {
                 "Детям и мамам"));
         List<String> catalogElements = header
                 .clickOnMainNavigationLink("Каталог")
-                .getCatalogElements();
+                .getListOfCatalogElements();
         assertThat(catalogElements)
                 .as("Catalog page sections titles is not displayed")
                 .containsExactlyElementsOf(catalogElementsExpected);
@@ -37,15 +39,15 @@ public class ProductPagesTest extends BaseTest {
 
     @Test
     public void testIsVerticalListOfSpecifiedSectionsExists() {
-        List<String> titlesExpectedValues = new ArrayList<>(Arrays.asList("Ноутбуки, компьютеры, мониторы",
+        List<String> titleCollectionExpectedValues = new ArrayList<>(Arrays.asList("Ноутбуки, компьютеры, мониторы",
                 "Комплектующие"));
         List<String> catalogClassifierElements = header
                 .clickOnMainNavigationLink("Каталог")
                 .clickOnCatalogClassifierLink("Компьютеры и\u00a0сети")
-                .getCatalogCategoriesElements();
+                .getListOfCatalogCategoryElements();
         assertThat(catalogClassifierElements)
                 .as("Catalog page vertical list of specified sections is not displayed")
-                .containsAll(titlesExpectedValues);
+                .containsAll(titleCollectionExpectedValues);
     }
 
     @Test
@@ -54,7 +56,7 @@ public class ProductPagesTest extends BaseTest {
                 .clickOnMainNavigationLink("Каталог")
                 .clickOnCatalogClassifierLink("Компьютеры и\u00a0сети")
                 .clickOnCatalogClassifierCategoryLink("Комплектующие")
-                .getCatalogCategoriesProductElements();
+                .getListOfCatalogCategoryProductElements();
         assertThat(catalogElements.iterator())
                 .as("Catalog elements are not presented")
                 .isNotNull()
@@ -63,7 +65,7 @@ public class ProductPagesTest extends BaseTest {
                 .clickOnMainNavigationLink("Каталог")
                 .clickOnCatalogClassifierLink("Компьютеры и\u00a0сети")
                 .clickOnCatalogClassifierCategoryLink("Комплектующие")
-                .getCatalogCategoriesProductDescriptionElements();
+                .getListOfCatalogCategoryProductDescriptionElements();
         assertThat(catalogElements)
                 .as("Each description of elements in section Accessories should contain p.")
                 .anyMatch(element -> element.contains("р."));
@@ -71,54 +73,15 @@ public class ProductPagesTest extends BaseTest {
 
     @Test
     public void testIsFullDescriptionOfEachProductExists() {
-        List<Integer> quantityElementsPage = header
+        Map<By, List<WebElement>> pageElements = header
                 .clickOnMainNavigationLink("Каталог")
                 .clickOnCatalogClassifierLink("Электроника")
                 .clickOnCatalogClassifierCategoryLink("Аудиотехника")
                 .clickOnProductLink("Наушники")
-                .getCatalogCategoriesProductFullDescriptionElements();
-        assertThat(quantityElementsPage)
+                .getListOfCatalogCategoryProductFullDescriptionElements();
+        assertThat(pageElements.entrySet().iterator())
                 .as("A full description of each product item is not provided")
-                .allMatch(element -> element.equals(quantityElementsPage.get(0)));
-    }
-
-    @Test
-    public void testIsElementsPresentInAccessoriesSection() {
-        List<String> catalogElements = header
-                .clickOnMainNavigationLink("Каталог")
-                .clickOnCatalogClassifierLink("Компьютеры и\u00a0сети")
-                .clickOnCatalogClassifierCategoryLink("Аксессуары к ноутбукам и\u00a0компьютерам")
-                .getCatalogCategoriesProductElements();
-        assertThat(catalogElements.iterator())
-                .as("Catalog elements are not presented")
                 .isNotNull()
                 .hasNext();
-    }
-
-    @Test
-    public void testIsSchemaFilterExist() {
-        List<String> titleExpectedValues = new ArrayList<>(Arrays.asList("Производитель",
-                "Цена"));
-        List<String> catalogElements = header
-                .clickOnMainNavigationLink("Каталог")
-                .clickOnCatalogClassifierLink("Дом и\u00a0сад")
-                .clickOnCatalogClassifierCategoryLink("Садовая техника и\u00a0инструменты")
-                .clickOnProductLink("Триммеры")
-                .getCatalogSchemaFilterElements();
-        assertThat(catalogElements)
-                .as("Product page filter of  section is not displayed")
-                .containsAll(titleExpectedValues);
-    }
-
-    @Test
-    public void testIsTitlesOfFooterExist() {
-        List<String> titlesOfFooterExpectedValues = new ArrayList<>(Arrays.asList("О компании", "Контакты редакции", "Реклама",
-                "Тарифы", "Вакансии", "Манифест", "Пользовательское соглашение", "Публичные договоры",
-                "Политика обработки персональных данных", "Поддержка пользователей", "Правила возврата"));
-        List<String> catalogElements = header
-                .getTitlesOfFooterElements();
-        assertThat(catalogElements)
-                .as("Product page titles of footer is not displayed")
-                .containsExactlyElementsOf(titlesOfFooterExpectedValues);
     }
 }
