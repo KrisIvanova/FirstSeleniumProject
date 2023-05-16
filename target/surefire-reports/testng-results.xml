@@ -1,25 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-17T21:04:48 MSK" name="Surefire suite" finished-at="2023-04-17T21:05:20 MSK" duration-ms="31999">
+  <suite started-at="2023-05-17T01:59:05 MSK" name="Surefire suite" finished-at="2023-05-17T02:00:10 MSK" duration-ms="65302">
     <groups>
     </groups>
-    <test started-at="2023-04-17T21:04:48 MSK" name="Surefire test" finished-at="2023-04-17T21:05:20 MSK" duration-ms="31999">
-      <class name="com.it_academy.test.onliner.ProductPagesTest">
-        <test-method is-config="true" signature="navigationToHomePage()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@3f3c7bdb]" started-at="2023-04-17T21:04:48 MSK" name="navigationToHomePage" finished-at="2023-04-17T21:04:57 MSK" duration-ms="8509" status="PASS">
+    <test started-at="2023-05-17T01:59:05 MSK" name="Surefire test" finished-at="2023-05-17T02:00:10 MSK" duration-ms="65302">
+      <class name="com.it_academy.onliner.test.web.ProductPagesTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:05 MSK" name="setUp" finished-at="2023-05-17T01:59:15 MSK" duration-ms="9566" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="navigationToHomePage()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:15 MSK" name="navigationToHomePage" finished-at="2023-05-17T01:59:20 MSK" duration-ms="5525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigationToHomePage -->
-        <test-method signature="testSetGouLocation()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@3f3c7bdb]" started-at="2023-04-17T21:04:57 MSK" name="testSetGouLocation" finished-at="2023-04-17T21:05:20 MSK" duration-ms="23431" status="PASS">
+        <test-method signature="testIsElementsDescriptionPresentUnderEachElementsTitle()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:20 MSK" name="testIsElementsDescriptionPresentUnderEachElementsTitle" finished-at="2023-05-17T01:59:31 MSK" duration-ms="10354" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSetGouLocation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.it_academy.test.onliner.ProductPagesTest@3f3c7bdb]" started-at="2023-04-17T21:05:20 MSK" name="closeBrowser" finished-at="2023-04-17T21:05:21 MSK" duration-ms="325" status="PASS">
+        </test-method> <!-- testIsElementsDescriptionPresentUnderEachElementsTitle -->
+        <test-method signature="testIsElementsPresentInAccessoriesSection()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:31 MSK" name="testIsElementsPresentInAccessoriesSection" finished-at="2023-05-17T01:59:37 MSK" duration-ms="5628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsElementsPresentInAccessoriesSection -->
+        <test-method signature="testIsFullDescriptionOfEachProductExists()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:37 MSK" name="testIsFullDescriptionOfEachProductExists" finished-at="2023-05-17T01:59:49 MSK" duration-ms="12403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsFullDescriptionOfEachProductExists -->
+        <test-method signature="testIsSchemaFilterExist()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:49 MSK" name="testIsSchemaFilterExist" finished-at="2023-05-17T02:00:00 MSK" duration-ms="10658" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsSchemaFilterExist -->
+        <test-method signature="testIsSectionsTitlesExists()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T02:00:00 MSK" name="testIsSectionsTitlesExists" finished-at="2023-05-17T02:00:03 MSK" duration-ms="2702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsSectionsTitlesExists -->
+        <test-method signature="testIsTitlesOfFooterExist()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T02:00:03 MSK" name="testIsTitlesOfFooterExist" finished-at="2023-05-17T02:00:03 MSK" duration-ms="248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsTitlesOfFooterExist -->
+        <test-method signature="testIsVerticalListOfSpecifiedSectionsExists()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T02:00:03 MSK" name="testIsVerticalListOfSpecifiedSectionsExists" finished-at="2023-05-17T02:00:10 MSK" duration-ms="6615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsVerticalListOfSpecifiedSectionsExists -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T02:00:10 MSK" name="closeBrowser" finished-at="2023-05-17T02:00:10 MSK" duration-ms="629" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.it_academy.test.onliner.ProductPagesTest -->
+      </class> <!-- com.it_academy.onliner.test.web.ProductPagesTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
