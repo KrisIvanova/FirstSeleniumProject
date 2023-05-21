@@ -3,8 +3,9 @@ package com.it_academy.onliner.test.web;
 import com.it_academy.onliner.framework.DriverManager;
 import com.it_academy.onliner.pageobject.Header;
 
-import com.it_academy.onliner.pageobject.ProductPage;
 import com.it_academy.onliner.test.BaseTest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -14,12 +15,20 @@ import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 public class ProductPagesTest extends BaseTest {
 
+    protected static final Logger LOG = LoggerFactory.getLogger(ProductPagesTest.class);
+
     private Header header;
+
+    @Test
+    public void voidTestLogs(){
+        LOG.info("this is an info message");
+        LOG.debug("this is an debug message");
+    }
 
     @BeforeClass
     public void navigationToHomePage() {
         header = new Header();
-        DriverManager.getWebDriver().get("https://www.onliner.by/");
+        DriverManager.getWebDriver().get("https://www.onliner.by");
     }
 
     @Test
@@ -37,7 +46,7 @@ public class ProductPagesTest extends BaseTest {
 
     @Test
     public void testIsVerticalListOfSpecifiedSectionsExists() {
-        List<String> titlesExpectedValues = new ArrayList<>(Arrays.asList("Ноутбуки, компьютеры, мониторы",
+        List<String> titlesExpectedValues = (Arrays.asList("Ноутбуки, компьютеры, мониторы",
                 "Комплектующие"));
         List<String> catalogClassifierElements = header
                 .clickOnMainNavigationLink("Каталог")

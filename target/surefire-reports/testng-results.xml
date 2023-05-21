@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-17T01:59:05 MSK" name="Surefire suite" finished-at="2023-05-17T02:00:10 MSK" duration-ms="65302">
+  <suite started-at="2023-05-21T21:36:06 MSK" name="Surefire suite" finished-at="2023-05-21T21:37:14 MSK" duration-ms="67669">
     <groups>
     </groups>
-    <test started-at="2023-05-17T01:59:05 MSK" name="Surefire test" finished-at="2023-05-17T02:00:10 MSK" duration-ms="65302">
+    <test started-at="2023-05-21T21:36:06 MSK" name="Surefire test" finished-at="2023-05-21T21:37:14 MSK" duration-ms="67669">
       <class name="com.it_academy.onliner.test.web.ProductPagesTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:05 MSK" name="setUp" finished-at="2023-05-17T01:59:15 MSK" duration-ms="9566" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:36:06 MSK" name="setUp" finished-at="2023-05-21T21:36:18 MSK" duration-ms="11221" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -16,39 +16,43 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="navigationToHomePage()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:15 MSK" name="navigationToHomePage" finished-at="2023-05-17T01:59:20 MSK" duration-ms="5525" status="PASS">
+        <test-method is-config="true" signature="navigationToHomePage()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:36:18 MSK" name="navigationToHomePage" finished-at="2023-05-21T21:36:22 MSK" duration-ms="4663" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigationToHomePage -->
-        <test-method signature="testIsElementsDescriptionPresentUnderEachElementsTitle()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:20 MSK" name="testIsElementsDescriptionPresentUnderEachElementsTitle" finished-at="2023-05-17T01:59:31 MSK" duration-ms="10354" status="PASS">
+        <test-method signature="testIsElementsDescriptionPresentUnderEachElementsTitle()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:36:22 MSK" name="testIsElementsDescriptionPresentUnderEachElementsTitle" finished-at="2023-05-21T21:36:32 MSK" duration-ms="9225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIsElementsDescriptionPresentUnderEachElementsTitle -->
-        <test-method signature="testIsElementsPresentInAccessoriesSection()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:31 MSK" name="testIsElementsPresentInAccessoriesSection" finished-at="2023-05-17T01:59:37 MSK" duration-ms="5628" status="PASS">
+        <test-method signature="testIsElementsPresentInAccessoriesSection()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:36:32 MSK" name="testIsElementsPresentInAccessoriesSection" finished-at="2023-05-21T21:36:36 MSK" duration-ms="3742" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIsElementsPresentInAccessoriesSection -->
-        <test-method signature="testIsFullDescriptionOfEachProductExists()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:37 MSK" name="testIsFullDescriptionOfEachProductExists" finished-at="2023-05-17T01:59:49 MSK" duration-ms="12403" status="PASS">
+        <test-method signature="testIsFullDescriptionOfEachProductExists()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:36:36 MSK" name="testIsFullDescriptionOfEachProductExists" finished-at="2023-05-21T21:36:49 MSK" duration-ms="13875" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIsFullDescriptionOfEachProductExists -->
-        <test-method signature="testIsSchemaFilterExist()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T01:59:49 MSK" name="testIsSchemaFilterExist" finished-at="2023-05-17T02:00:00 MSK" duration-ms="10658" status="PASS">
+        <test-method signature="testIsSchemaFilterExist()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:36:49 MSK" name="testIsSchemaFilterExist" finished-at="2023-05-21T21:37:01 MSK" duration-ms="11830" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIsSchemaFilterExist -->
-        <test-method signature="testIsSectionsTitlesExists()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T02:00:00 MSK" name="testIsSectionsTitlesExists" finished-at="2023-05-17T02:00:03 MSK" duration-ms="2702" status="PASS">
+        <test-method signature="testIsSectionsTitlesExists()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:37:01 MSK" name="testIsSectionsTitlesExists" finished-at="2023-05-21T21:37:04 MSK" duration-ms="2376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIsSectionsTitlesExists -->
-        <test-method signature="testIsTitlesOfFooterExist()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T02:00:03 MSK" name="testIsTitlesOfFooterExist" finished-at="2023-05-17T02:00:03 MSK" duration-ms="248" status="PASS">
+        <test-method signature="testIsTitlesOfFooterExist()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:37:04 MSK" name="testIsTitlesOfFooterExist" finished-at="2023-05-21T21:37:04 MSK" duration-ms="285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIsTitlesOfFooterExist -->
-        <test-method signature="testIsVerticalListOfSpecifiedSectionsExists()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T02:00:03 MSK" name="testIsVerticalListOfSpecifiedSectionsExists" finished-at="2023-05-17T02:00:10 MSK" duration-ms="6615" status="PASS">
+        <test-method signature="testIsVerticalListOfSpecifiedSectionsExists()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:37:04 MSK" name="testIsVerticalListOfSpecifiedSectionsExists" finished-at="2023-05-21T21:37:10 MSK" duration-ms="6330" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIsVerticalListOfSpecifiedSectionsExists -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@6801b414]" started-at="2023-05-17T02:00:10 MSK" name="closeBrowser" finished-at="2023-05-17T02:00:10 MSK" duration-ms="629" status="PASS">
+        <test-method signature="voidTestLogs()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:37:10 MSK" name="voidTestLogs" finished-at="2023-05-21T21:37:10 MSK" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- voidTestLogs -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.it_academy.onliner.test.web.ProductPagesTest@54c622a7]" started-at="2023-05-21T21:37:10 MSK" name="closeBrowser" finished-at="2023-05-21T21:37:14 MSK" duration-ms="3590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

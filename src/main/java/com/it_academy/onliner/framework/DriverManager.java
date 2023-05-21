@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class DriverManager {
 
     private static ThreadLocal<RemoteWebDriver> driver =
-            new ThreadLocal();
+            new ThreadLocal<>();
 
     public static synchronized void setWebDriver(String browser) {
         if(driver.get() == null) {

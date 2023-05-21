@@ -10,7 +10,7 @@ public enum Driver {
     REMOTE("remote", new RemoteDriverCreator());
 
     private String driverType;
-    private WebDriverCreator webDriverCreator;
+    private final WebDriverCreator webDriverCreator;
 
     Driver(String driverType, WebDriverCreator webDriverCreator) {
         this.driverType = driverType;
